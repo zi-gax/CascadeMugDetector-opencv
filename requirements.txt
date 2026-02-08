@@ -1,0 +1,7 @@
+#image downloader
+
+playwright
+requests
+
+#annotation
+labelImg

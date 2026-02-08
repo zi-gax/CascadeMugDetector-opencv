@@ -1,0 +1,230 @@
+import os
+import time
+import requests
+import hashlib
+import xml.etree.ElementTree as ET
+from playwright.sync_api import sync_playwright
+
+# ---------------- CONFIG ----------------
+CHROME_PATH = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+SAVE_DIR = "images"  # default folder for downloads
+os.makedirs(SAVE_DIR, exist_ok=True)
+# ---------------------------------------
+
+# --------- GOOGLE IMAGES SCRAPER ---------
+def google_images_scraper():
+    QUERY = input("🔹 Enter search query for Google Images: ")
+    TARGET_COUNT = int(input("🔹 Enter number of images to download: "))
+
+    SCROLL_PAUSE = 2
+    SCROLL_STEP = 3000
+    MAX_RETRIES = 5
+    RETRY_WAIT = 10
+    TIMEOUT = 20
+
+    def downloaded_count():
+        return len([f for f in os.listdir(SAVE_DIR) if f.endswith(".jpg")])
+
+    def download_with_retry(url, path):
+        for i in range(1, MAX_RETRIES + 1):
+            try:
+                r = requests.get(url, timeout=TIMEOUT, headers={"User-Agent": "Mozilla/5.0"})
+                r.raise_for_status()
+                with open(path, "wb") as f:
+                    f.write(r.content)
+                return True
+            except Exception as e:
+                print(f"⚠️ retry {i}/{MAX_RETRIES} for {url} — {e}")
+                time.sleep(RETRY_WAIT)
+        return False
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=False,
+            executable_path=CHROME_PATH,
+            args=["--disable-blink-features=AutomationControlled"]
+        )
+        page = browser.new_page()
+        page.goto(f"https://www.google.com/search?q={QUERY}&tbm=isch&tbs=isz:l", timeout=60000)
+        print("🔎 Google Images loaded")
+
+        collected_urls = set()
+        last_height = 0
+
+        while downloaded_count() < TARGET_COUNT:
+            imgs = page.query_selector_all("img")
+            for img in imgs:
+                try:
+                    src = img.get_attribute("data-iurl") or img.get_attribute("data-src") or img.get_attribute("src")
+                    if not src or not src.startswith("http") or src in collected_urls:
+                        continue
+                    collected_urls.add(src)
+                    idx = downloaded_count() + 1
+                    path = f"{SAVE_DIR}/{QUERY}_{idx}.jpg"
+                    if os.path.exists(path):
+                        continue
+                    if download_with_retry(src, path):
+                        print(f"✅ {idx}/{TARGET_COUNT}")
+                    if downloaded_count() >= TARGET_COUNT:
+                        break
+                except:
+                    continue
+
+            page.mouse.wheel(0, SCROLL_STEP)
+            time.sleep(SCROLL_PAUSE)
+            new_height = page.evaluate("document.body.scrollHeight")
+            if new_height == last_height:
+                print("📌 No more new images loaded, stopping scroll")
+                break
+            last_height = new_height
+
+        browser.close()
+    print("🎉 Google Images download complete!")
+
+# --------- PIXABAY SCRAPER ---------
+def pixabay_scraper():
+    API_KEY = input("🔹 Enter your Pixabay API key: ")
+    QUERY = input("🔹 Enter search query for Pixabay: ")
+    TOTAL_IMAGES = int(input("🔹 Enter number of images to download: "))
+    PER_PAGE = 200
+
+    existing_files = [f for f in os.listdir(SAVE_DIR) if f.endswith(".jpg")]
+    downloaded = len(existing_files)
+    page_num = downloaded // PER_PAGE + 1
+    print(f"🔁 Resume from image {downloaded + 1}, page {page_num}")
+
+    while downloaded < TOTAL_IMAGES:
+        url = f"https://pixabay.com/api/?key={API_KEY}&q={QUERY}&image_type=photo&per_page={PER_PAGE}&page={page_num}"
+        response = requests.get(url).json()
+        hits = response.get("hits", [])
+
+        if not hits:
+            print("❌ Can't find more photos.")
+            break
+
+        for img in hits:
+            if downloaded >= TOTAL_IMAGES:
+                break
+            file_path = os.path.join(SAVE_DIR, f"{QUERY}_{downloaded + 1}.jpg")
+            if os.path.exists(file_path):
+                downloaded += 1
+                continue
+            img_url = img["largeImageURL"]
+            img_data = requests.get(img_url).content
+            with open(file_path, "wb") as f:
+                f.write(img_data)
+            downloaded += 1
+            print(f"✅ {downloaded}/{TOTAL_IMAGES}")
+
+        page_num += 1
+        time.sleep(1)
+    print("🎉 Pixabay download complete!")
+
+# --------- REMOVE DUPLICATES ---------
+def remove_duplicates():
+    folder_path = input(f"🔹 Enter folder path (default={SAVE_DIR}): ") or SAVE_DIR
+    DELETE = input("Delete duplicates? (y/n): ").lower() == "y"
+
+    def hash_file(filepath):
+        hasher = hashlib.md5()
+        with open(filepath, 'rb') as f:
+            buf = f.read()
+            hasher.update(buf)
+        return hasher.hexdigest()
+
+    hashes = {}
+    duplicates = []
+
+    for root, dirs, files in os.walk(folder_path):
+        for file in files:
+            if file.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp', '.gif')):
+                file_path = os.path.join(root, file)
+                file_hash = hash_file(file_path)
+                
+                if file_hash in hashes:
+                    duplicates.append(file_path)
+                    if DELETE:
+                        os.remove(file_path)
+                        print(f"Deleted duplicate: {file_path}")
+                else:
+                    hashes[file_hash] = file_path
+
+    if not DELETE:
+        print("Duplicate images found:")
+        for dup in duplicates:
+            print(dup)
+    print("✅ Duplicate check complete!")
+
+# --------- RENAME IMAGES ---------
+def rename_images():
+    folder_path = input(f"🔹 Enter folder path (default={SAVE_DIR}): ") or SAVE_DIR
+    prefix = input("Prefix for new filenames: ") or "img_"
+    start_index = int(input("Starting index: ") or 1)
+    num_digits = int(input("Number of digits (e.g., 3 for 001): ") or 3)
+
+    files = os.listdir(folder_path)
+    files.sort()
+    index = start_index
+
+    for file_name in files:
+        old_path = os.path.join(folder_path, file_name)
+        if os.path.isfile(old_path):
+            ext = os.path.splitext(file_name)[1]
+            new_name = f"{prefix}{str(index).zfill(num_digits)}{ext}"
+            new_path = os.path.join(folder_path, new_name)
+            os.rename(old_path, new_path)
+            print(f"Renamed: {file_name} -> {new_name}")
+            index += 1
+    print("✅ Renaming complete!")
+
+# --------- GENERATE POSITIVES.TXT ---------
+def generate_positives_txt():
+    folder = input("🔹 Enter folder path with XML files: ") or SAVE_DIR
+    output_file = input("Output file name (default=positives.txt): ") or "positives.txt"
+
+    with open(output_file, "w") as f:
+        for xml_file in os.listdir(folder):
+            if not xml_file.endswith(".xml"):
+                continue
+            tree = ET.parse(os.path.join(folder, xml_file))
+            root = tree.getroot()
+            img_file = root.find("filename").text
+            for obj in root.findall("object"):
+                bndbox = obj.find("bndbox")
+                x = bndbox.find("xmin").text
+                y = bndbox.find("ymin").text
+                w = int(bndbox.find("xmax").text) - int(x)
+                h = int(bndbox.find("ymax").text) - int(y)
+                f.write(f"{os.path.join(folder,img_file)} {x} {y} {w} {h}\n")
+    print(f"✅ {output_file} generated!")
+
+# --------- MAIN MENU ---------
+def main_menu():
+    while True:
+        print("\n=== Image Manager Menu ===")
+        print("1. Download images from Google")
+        print("2. Download images from Pixabay")
+        print("3. Remove duplicate images")
+        print("4. Rename images")
+        print("5. Generate positives.txt from XMLs")
+        print("6. Exit")
+
+        choice = input("Enter your choice (1-6): ")
+        if choice == "1":
+            google_images_scraper()
+        elif choice == "2":
+            pixabay_scraper()
+        elif choice == "3":
+            remove_duplicates()
+        elif choice == "4":
+            rename_images()
+        elif choice == "5":
+            generate_positives_txt()
+        elif choice == "6":
+            print("👋 Goodbye!")
+            break
+        else:
+            print("❌ Invalid choice, try again.")
+
+if __name__ == "__main__":
+    main_menu()
