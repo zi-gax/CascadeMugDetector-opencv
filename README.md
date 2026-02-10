@@ -112,3 +112,15 @@ opencv_createsamples.exe -info positive/positives.txt -w 24 -h 24 -num 1000 -vec
 ```bash
 opencv_traincascade.exe -data cascade/ -vec vec/positives.vec -bg negative/neg.txt -w 24 -h 24 -numPos 500 -numNeg 1000 -numStages 10
 ```
+## 📥 OpenCV Installer & Microsoft Visual C All Package
+
+#### [Download OpenCV 3.4.16 for Windows ](https://sourceforge.net/projects/opencvlibrary/files/3.4.16/opencv-3.4.16-vc14_vc15.exe/download)
+
+#### [Microsoft Visual C All Package ](https://dl2.soft98.ir/soft/m/Microsoft.Visual.C.All.Package.2025-11-23.rar?1770744478)
+```
+1-Install VisualCppRedist_AIO_x86_x64.exe
+
+2-Extract opencv-3.4.16-vc14_vc15.exe to C:\ (recommended) or any path you prefer
+
+3-(Optional) Add OpenCV to the PATH environment variable for easier access
+```

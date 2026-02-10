@@ -239,7 +239,7 @@ def generate_negatives_txt():
 
 # --------- SUGGEST WIDTH/HEIGHT FOR opencv_createsamples ---------
 def suggest_sample_size():
-    info_file = input("🔹 Enter positives.txt path (default=positives.txt): ") or "positives.txt"
+    info_file = input("🔹 Enter positives.txt path (default=positives.txt): ") or "positive/positives.txt"
 
     try:
         widths = []
