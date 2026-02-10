@@ -1,0 +1,26 @@
+<annotation>
+	<folder>positive</folder>
+	<filename>mug276.jpg</filename>
+	<path>C:\Users\khode\Desktop\cascadeclassimug\positive\mug276.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>201</width>
+		<height>251</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>mug</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>26</xmin>
+			<ymin>58</ymin>
+			<xmax>182</xmax>
+			<ymax>204</ymax>
+		</bndbox>
+	</object>
+</annotation>

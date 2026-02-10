@@ -1,0 +1,465 @@
+positive/mug001.jpg 1 530 83 734 641
+positive/mug002.jpg 1 565 182 686 490
+positive/mug003.jpg 1 152 204 418 510
+positive/mug004.jpg 1 527 242 605 564
+positive/mug005.jpg 1 342 252 371 385
+positive/mug006.jpg 1 670 336 365 325
+positive/mug007.jpg 1 175 125 853 599
+positive/mug008.jpg 1 168 89 402 505
+positive/mug009.jpg 1 205 384 507 469
+positive/mug010.jpg 1 162 93 851 719
+positive/mug011.jpg 1 715 64 531 529
+positive/mug012.jpg 1 193 119 799 627
+positive/mug013.jpg 1 146 186 1104 656
+positive/mug014.jpg 1 339 175 418 392
+positive/mug015.jpg 1 219 739 516 508
+positive/mug016.jpg 1 687 336 535 480
+positive/mug017.jpg 1 101 163 816 640
+positive/mug018.jpg 1 511 102 604 604
+positive/mug019.jpg 1 280 497 361 337
+positive/mug020.jpg 1 421 633 341 378
+positive/mug021.jpg 1 283 251 990 892
+positive/mug022.jpg 3 293 544 360 233 221 764 373 283 760 787 93 296
+positive/mug023.jpg 2 581 135 294 235 170 127 290 226
+positive/mug024.jpg 1 187 198 510 385
+positive/mug025.jpg 1 335 140 478 633
+positive/mug026.jpg 1 154 385 832 656
+positive/mug027.jpg 1 514 328 588 619
+positive/mug028.jpg 1 441 243 663 533
+positive/mug029.jpg 2 609 183 496 504 177 158 492 553
+positive/mug030.jpg 1 197 587 544 492
+positive/mug031.jpg 1 191 82 959 711
+positive/mug032.jpg 1 350 180 420 548
+positive/mug033.jpg 1 96 139 1072 995
+positive/mug034.jpg 1 346 225 698 614
+positive/mug035.jpg 1 251 295 413 441
+positive/mug036.jpg 1 604 21 476 536
+positive/mug037.jpg 1 672 222 596 591
+positive/mug038.jpg 3 32 195 565 522 395 183 526 561 763 159 501 515
+positive/mug039.jpg 1 415 328 404 372
+positive/mug040.jpg 1 370 230 204 213
+positive/mug041.jpg 1 172 201 480 485
+positive/mug042.jpg 1 426 208 473 395
+positive/mug043.jpg 1 686 63 433 521
+positive/mug044.jpg 1 540 241 464 382
+positive/mug045.jpg 1 670 87 496 562
+positive/mug046.jpg 3 503 487 298 265 132 543 310 327 347 772 442 410
+positive/mug047.jpg 1 307 315 561 486
+positive/mug048.jpg 1 360 154 564 548
+positive/mug049.jpg 1 458 340 317 245
+positive/mug050.jpg 1 622 260 305 322
+positive/mug051.jpg 1 406 284 560 567
+positive/mug052.jpg 1 36 69 774 602
+positive/mug053.jpg 1 76 338 759 636
+positive/mug054.jpg 1 540 247 629 559
+positive/mug055.jpg 1 436 697 472 554
+positive/mug056.jpg 1 442 454 440 352
+positive/mug057.jpg 1 318 204 651 530
+positive/mug058.jpg 1 632 311 261 267
+positive/mug059.jpg 1 140 232 607 481
+positive/mug060.jpg 1 340 235 458 489
+positive/mug061.jpg 1 613 438 503 373
+positive/mug062.jpg 1 134 22 401 498
+positive/mug063.jpg 1 444 79 539 518
+positive/mug064.jpg 1 124 497 682 547
+positive/mug065.jpg 1 146 344 776 651
+positive/mug066.jpg 1 109 533 597 498
+positive/mug067.jpg 1 105 447 302 287
+positive/mug068.jpg 1 609 212 607 393
+positive/mug069.jpg 1 221 124 458 501
+positive/mug070.jpg 1 98 300 736 600
+positive/mug071.jpg 1 624 594 369 229
+positive/mug072.jpg 1 559 16 404 465
+positive/mug073.jpg 1 338 469 268 231
+positive/mug074.jpg 2 1 121 941 736 511 18 769 765
+positive/mug075.jpg 1 715 234 565 521
+positive/mug076.jpg 1 587 120 682 533
+positive/mug077.jpg 1 130 534 694 595
+positive/mug078.jpg 1 1 1 820 1173
+positive/mug079.jpg 1 436 356 573 425
+positive/mug080.jpg 1 530 193 671 636
+positive/mug081.jpg 1 75 329 373 364
+positive/mug082.jpg 1 324 113 765 597
+positive/mug083.jpg 1 262 551 242 247
+positive/mug084.jpg 1 291 441 439 440
+positive/mug085.jpg 1 897 360 383 438
+positive/mug086.jpg 1 440 217 511 406
+positive/mug087.jpg 1 108 470 394 305
+positive/mug088.jpg 1 658 133 549 583
+positive/mug089.jpg 1 71 17 832 778
+positive/mug090.jpg 1 517 684 299 331
+positive/mug091.jpg 1 138 122 606 577
+positive/mug092.jpg 1 350 158 642 560
+positive/mug093.jpg 1 533 2 736 848
+positive/mug094.jpg 1 464 143 540 640
+positive/mug095.jpg 1 308 482 781 526
+positive/mug096.jpg 1 515 283 250 236
+positive/mug097.jpg 3 207 231 480 469 456 336 648 521 828 301 404 556
+positive/mug098.jpg 1 609 369 310 267
+positive/mug099.jpg 1 509 178 618 568
+positive/mug100.jpg 1 616 322 382 417
+positive/mug101.jpg 1 179 370 541 614
+positive/mug102.jpg 1 157 87 1054 1020
+positive/mug103.jpg 1 82 23 593 670
+positive/mug104.jpg 1 315 150 637 478
+positive/mug105.jpg 1 105 90 566 520
+positive/mug106.jpg 1 148 525 558 478
+positive/mug107.jpg 1 170 331 700 687
+positive/mug108.jpg 1 106 553 303 302
+positive/mug109.jpg 1 268 407 530 348
+positive/mug110.jpg 1 162 643 247 209
+positive/mug111.jpg 1 348 105 708 570
+positive/mug112.jpg 1 675 377 367 294
+positive/mug113.jpg 1 121 384 709 645
+positive/mug114.jpg 1 199 410 429 370
+positive/mug115.jpg 1 140 43 1074 845
+positive/mug116.jpg 1 885 1 387 315
+positive/mug117.jpg 1 562 335 414 400
+positive/mug118.jpg 1 400 114 587 639
+positive/mug119.jpg 1 557 275 232 283
+positive/mug120.jpg 1 37 79 144 121
+positive/mug121.jpg 2 1 113 474 532 446 6 560 478
+positive/mug122.jpg 1 658 284 577 481
+positive/mug123.jpg 1 12 24 197 182
+positive/mug124.jpg 1 25 49 167 135
+positive/mug125.jpg 1 257 104 920 792
+positive/mug126.jpg 3 130 84 84 82 36 42 96 80 16 114 95 84
+positive/mug127.jpg 1 42 39 161 169
+positive/mug128.jpg 1 57 18 181 161
+positive/mug129.jpg 2 36 16 137 101 51 107 145 100
+positive/mug130.jpg 3 127 111 66 86 96 80 65 78 11 87 75 98
+positive/mug131.jpg 1 8 13 206 195
+positive/mug132.jpg 1 20 35 169 171
+positive/mug133.jpg 1 445 300 579 446
+positive/mug134.jpg 1 127 72 85 95
+positive/mug135.jpg 1 9 751 346 321
+positive/mug136.jpg 1 102 58 108 98
+positive/mug137.jpg 1 51 61 155 151
+positive/mug138.jpg 1 48 68 122 121
+positive/mug139.jpg 1 30 41 153 153
+positive/mug140.jpg 1 20 73 166 147
+positive/mug141.jpg 1 37 52 161 139
+positive/mug142.jpg 1 1 82 149 152
+positive/mug143.jpg 1 18 36 188 168
+positive/mug144.jpg 1 440 248 569 480
+positive/mug145.jpg 2 72 102 134 107 29 51 124 86
+positive/mug146.jpg 1 228 194 751 608
+positive/mug147.jpg 1 38 48 154 146
+positive/mug148.jpg 2 648 41 612 723 28 58 583 676
+positive/mug149.jpg 1 53 59 138 112
+positive/mug150.jpg 6 150 116 72 82 139 56 79 73 103 77 48 84 54 41 70 74 5 73 80 76 32 114 94 91
+positive/mug151.jpg 1 47 49 115 104
+positive/mug152.jpg 1 25 44 162 164
+positive/mug153.jpg 1 20 47 162 142
+positive/mug154.jpg 1 52 60 146 136
+positive/mug155.jpg 1 43 60 120 99
+positive/mug156.jpg 21 26 13 233 207 181 82 253 240 364 14 224 197 519 98 284 217 682 17 246 218 841 87 285 253 1072 9 191 226 1060 250 209 226 881 310 266 251 722 202 248 249 374 184 243 288 203 264 231 302 38 220 227 248 41 482 193 268 181 591 246 215 353 476 254 235 530 352 217 227 487 567 289 246 689 460 261 273 866 582 235 223 1017 492 237 228
+positive/mug157.jpg 1 463 101 800 715
+positive/mug158.jpg 1 20 58 142 123
+positive/mug159.jpg 1 54 60 133 142
+positive/mug160.jpg 2 2 64 117 109 123 53 129 126
+positive/mug161.jpg 1 56 83 134 114
+positive/mug162.jpg 9 92 36 55 42 63 72 58 54 39 113 43 53 75 121 51 48 103 116 49 46 134 108 55 53 107 162 60 55 54 167 60 50 14 159 60 49
+positive/mug163.jpg 2 58 71 104 86 135 6 106 75
+positive/mug164.jpg 1 39 113 117 118
+positive/mug165.jpg 1 22 32 184 168
+positive/mug166.jpg 6 107 84 88 60 146 124 64 78 77 128 92 79 28 57 73 72 56 95 72 80 1 102 75 71
+positive/mug167.jpg 1 165 60 1005 690
+positive/mug168.jpg 1 16 62 159 174
+positive/mug169.jpg 2 90 15 135 117 1 74 149 133
+positive/mug170.jpg 1 37 55 163 139
+positive/mug171.jpg 1 55 34 153 135
+positive/mug172.jpg 1 638 201 277 346
+positive/mug173.jpg 4 155 93 58 52 76 88 59 40 78 120 62 51 11 110 53 42
+positive/mug174.jpg 1 10 20 209 178
+positive/mug175.jpg 1 22 80 143 112
+positive/mug176.jpg 1 23 26 169 172
+positive/mug177.jpg 1 318 113 486 701
+positive/mug178.jpg 1 224 145 802 612
+positive/mug179.jpg 1 40 22 169 143
+positive/mug180.jpg 1 216 110 636 682
+positive/mug181.jpg 1 33 49 154 136
+positive/mug182.jpg 1 9 82 153 133
+positive/mug183.jpg 1 14 71 152 133
+positive/mug184.jpg 1 52 49 136 135
+positive/mug185.jpg 1 610 265 250 268
+positive/mug186.jpg 2 3 37 107 96 120 64 105 138
+positive/mug187.jpg 1 16 21 188 179
+positive/mug188.jpg 2 80 434 384 348 824 410 361 335
+positive/mug189.jpg 1 22 72 162 154
+positive/mug190.jpg 1 34 35 184 143
+positive/mug191.jpg 3 486 86 509 460 189 235 593 546 54 122 310 432
+positive/mug192.jpg 1 36 24 177 174
+positive/mug193.jpg 1 83 107 112 99
+positive/mug194.jpg 1 67 74 116 106
+positive/mug195.jpg 1 29 43 176 143
+positive/mug196.jpg 1 53 50 129 141
+positive/mug197.jpg 1 22 58 135 118
+positive/mug198.jpg 1 454 6 709 602
+positive/mug199.jpg 1 360 98 710 631
+positive/mug200.jpg 1 47 51 169 137
+positive/mug201.jpg 2 128 51 111 106 18 37 109 111
+positive/mug202.jpg 1 500 384 511 365
+positive/mug203.jpg 1 16 32 192 171
+positive/mug204.jpg 1 1 3 218 222
+positive/mug205.jpg 1 48 54 161 133
+positive/mug206.jpg 8 75 65 63 49 138 105 58 50 89 106 62 49 38 107 58 46 163 145 56 55 114 149 57 47 65 142 58 61 12 137 63 65
+positive/mug207.jpg 3 5 64 77 90 85 57 73 104 163 60 75 114
+positive/mug208.jpg 1 542 140 308 436
+positive/mug209.jpg 5 100 80 84 80 181 30 75 77 200 96 58 62 15 24 79 67 28 80 72 63
+positive/mug210.jpg 1 42 105 142 108
+positive/mug211.jpg 1 24 44 165 142
+positive/mug212.jpg 1 262 228 612 562
+positive/mug213.jpg 1 237 541 616 538
+positive/mug214.jpg 1 37 54 171 164
+positive/mug215.jpg 1 21 67 145 131
+positive/mug216.jpg 1 50 61 157 142
+positive/mug217.jpg 1 56 68 136 106
+positive/mug218.jpg 1 34 179 823 888
+positive/mug219.jpg 2 12 100 96 87 105 97 99 100
+positive/mug220.jpg 3 75 111 76 71 139 63 72 83 20 50 63 79
+positive/mug221.jpg 1 29 37 145 177
+positive/mug222.jpg 1 28 50 175 158
+positive/mug223.jpg 1 146 87 478 578
+positive/mug224.jpg 2 6 57 98 114 91 76 107 124
+positive/mug225.jpg 1 63 70 92 95
+positive/mug226.jpg 1 26 120 133 105
+positive/mug227.jpg 1 407 680 405 367
+positive/mug228.jpg 1 23 80 152 128
+positive/mug229.jpg 1 19 66 180 146
+positive/mug230.jpg 2 1 63 115 119 103 78 107 114
+positive/mug231.jpg 1 39 37 171 156
+positive/mug232.jpg 4 4 104 101 97 27 54 102 93 124 105 98 97 123 14 100 97
+positive/mug233.jpg 2 71 110 135 111 1 83 131 100
+positive/mug234.jpg 1 376 78 663 641
+positive/mug235.jpg 3 1 42 120 98 105 18 99 103 165 56 115 107
+positive/mug236.jpg 2 17 95 110 102 113 102 95 104
+positive/mug237.jpg 1 435 194 498 426
+positive/mug238.jpg 1 8 17 214 191
+positive/mug239.jpg 1 21 56 170 165
+positive/mug240.jpg 2 104 64 90 106 23 67 99 111
+positive/mug241.jpg 1 82 8 165 139
+positive/mug242.jpg 3 10 118 103 98 66 87 117 110 115 65 108 111
+positive/mug243.jpg 1 31 82 146 123
+positive/mug244.jpg 1 196 626 407 462
+positive/mug245.jpg 2 93 110 74 84 30 104 75 92
+positive/mug246.jpg 1 366 113 658 645
+positive/mug247.jpg 2 82 53 135 146 3 24 136 138
+positive/mug248.jpg 1 222 186 681 600
+positive/mug249.jpg 4 12 112 96 87 84 8 90 58 120 52 89 72 74 52 66 73
+positive/mug250.jpg 1 50 78 156 134
+positive/mug251.jpg 2 18 82 94 109 111 84 104 110
+positive/mug252.jpg 1 36 37 176 165
+positive/mug253.jpg 1 53 31 161 163
+positive/mug254.jpg 1 43 56 106 106
+positive/mug255.jpg 1 58 60 134 131
+positive/mug256.jpg 1 24 10 192 197
+positive/mug257.jpg 1 233 205 401 429
+positive/mug258.jpg 1 113 375 490 476
+positive/mug259.jpg 1 27 58 148 130
+positive/mug260.jpg 1 28 24 166 186
+positive/mug261.jpg 1 22 32 180 179
+positive/mug262.jpg 1 12 38 197 173
+positive/mug263.jpg 1 18 35 194 154
+positive/mug264.jpg 1 28 31 187 170
+positive/mug265.jpg 4 86 67 90 64 6 88 90 76 15 156 111 92 88 131 96 83
+positive/mug266.jpg 6 1 6 94 79 97 6 90 83 186 8 89 84 186 99 85 84 94 94 95 87 2 93 99 86
+positive/mug267.jpg 2 1 57 118 162 124 40 101 152
+positive/mug268.jpg 1 301 225 811 804
+positive/mug269.jpg 1 28 34 168 150
+positive/mug270.jpg 1 37 21 150 188
+positive/mug271.jpg 1 31 22 185 180
+positive/mug272.jpg 1 48 48 154 131
+positive/mug273.jpg 1 23 33 181 172
+positive/mug274.jpg 1 51 53 136 128
+positive/mug275.jpg 1 51 45 140 145
+positive/mug276.jpg 1 26 58 156 146
+positive/mug277.jpg 1 54 40 160 147
+positive/mug278.jpg 1 199 541 518 518
+positive/mug279.jpg 1 654 131 475 479
+positive/mug280.jpg 1 57 36 148 136
+positive/mug281.jpg 1 335 341 291 216
+positive/mug282.jpg 1 394 546 363 256
+positive/mug283.jpg 2 43 13 117 103 39 104 142 100
+positive/mug284.jpg 1 3 19 217 192
+positive/mug285.jpg 1 53 30 148 166
+positive/mug286.jpg 1 44 41 171 169
+positive/mug287.jpg 3 14 13 118 108 139 10 109 108 257 7 118 110
+positive/mug288.jpg 1 43 62 115 98
+positive/mug289.jpg 1 33 111 152 121
+positive/mug290.jpg 1 492 226 583 476
+positive/mug291.jpg 2 4 65 113 96 111 69 111 92
+positive/mug292.jpg 1 226 125 872 1031
+positive/mug293.jpg 1 346 344 306 297
+positive/mug294.jpg 1 2 8 222 210
+positive/mug295.jpg 1 38 46 150 136
+positive/mug296.jpg 1 6 14 216 202
+positive/mug297.jpg 1 19 29 200 172
+positive/mug298.jpg 1 42 51 125 123
+positive/mug299.jpg 1 12 38 193 150
+positive/mug300.jpg 1 406 194 515 501
+positive/mug301.jpg 1 21 100 159 133
+positive/mug302.jpg 1 33 63 181 129
+positive/mug303.jpg 1 19 12 186 208
+positive/mug304.jpg 1 199 395 531 430
+positive/mug305.jpg 1 18 60 168 120
+positive/mug306.jpg 1 8 34 178 161
+positive/mug307.jpg 1 16 14 199 200
+positive/mug308.jpg 2 93 10 106 94 97 85 122 91
+positive/mug309.jpg 2 19 80 73 64 103 82 80 82
+positive/mug310.jpg 1 519 346 422 429
+positive/mug311.jpg 2 10 71 120 120 102 46 115 102
+positive/mug312.jpg 1 83 27 170 134
+positive/mug313.jpg 1 39 47 166 138
+positive/mug314.jpg 1 68 71 113 110
+positive/mug315.jpg 1 307 1 888 775
+positive/mug316.jpg 4 10 55 92 78 27 91 101 82 11 137 110 92 98 149 83 89
+positive/mug317.jpg 1 49 34 163 151
+positive/mug318.jpg 1 309 105 791 575
+positive/mug319.jpg 1 11 20 201 195
+positive/mug320.jpg 1 679 61 587 711
+positive/mug321.jpg 1 14 58 139 118
+positive/mug322.jpg 1 54 67 129 97
+positive/mug323.jpg 1 75 107 104 113
+positive/mug324.jpg 1 15 35 193 164
+positive/mug325.jpg 1 43 46 158 140
+positive/mug326.jpg 1 419 334 376 388
+positive/mug327.jpg 1 41 43 160 150
+positive/mug328.jpg 1 16 54 174 127
+positive/mug329.jpg 1 46 49 157 133
+positive/mug330.jpg 1 103 42 118 89
+positive/mug331.jpg 1 82 11 136 138
+positive/mug332.jpg 5 14 111 71 70 28 45 67 64 114 11 76 71 104 73 82 69 145 129 61 70
+positive/mug333.jpg 1 340 94 481 670
+positive/mug334.jpg 1 51 46 164 161
+positive/mug335.jpg 2 58 218 610 538 670 150 571 648
+positive/mug336.jpg 1 66 69 874 802
+positive/mug337.jpg 1 109 488 308 242
+positive/mug338.jpg 1 18 30 194 160
+positive/mug339.jpg 1 8 14 212 200
+positive/mug340.jpg 1 686 180 514 530
+positive/mug341.jpg 1 66 513 450 441
+positive/mug342.jpg 2 86 76 88 98 1 92 87 87
+positive/mug343.jpg 1 41 20 163 178
+positive/mug344.jpg 1 411 17 675 570
+positive/mug345.jpg 1 112 88 70 63
+positive/mug346.jpg 1 66 62 147 118
+positive/mug347.jpg 1 369 877 260 249
+positive/mug348.jpg 1 389 223 415 375
+positive/mug349.jpg 1 3 7 221 207
+positive/mug350.jpg 3 10 80 112 66 67 134 116 92 20 120 78 83
+positive/mug351.jpg 1 54 39 141 162
+positive/mug352.jpg 2 426 400 293 326 768 201 298 333
+positive/mug353.jpg 1 260 483 192 182
+positive/mug354.jpg 1 330 520 495 477
+positive/mug355.jpg 1 88 14 128 123
+positive/mug356.jpg 1 127 34 824 790
+positive/mug357.jpg 1 506 140 647 713
+positive/mug358.jpg 1 48 34 171 178
+positive/mug359.jpg 1 524 458 136 148
+positive/mug360.jpg 1 49 97 153 118
+positive/mug361.jpg 2 128 50 118 110 18 42 108 103
+positive/mug362.jpg 1 362 45 792 654
+positive/mug363.jpg 1 376 72 557 485
+positive/mug364.jpg 1 40 72 148 152
+positive/mug365.jpg 1 42 117 139 115
+positive/mug366.jpg 1 20 29 176 165
+positive/mug367.jpg 3 11 74 88 82 62 47 76 70 74 92 107 84
+positive/mug368.jpg 1 305 125 761 630
+positive/mug369.jpg 1 505 89 563 507
+positive/mug370.jpg 1 131 44 93 101
+positive/mug371.jpg 1 148 515 706 666
+positive/mug372.jpg 1 45 53 149 121
+positive/mug373.jpg 1 541 295 291 331
+positive/mug374.jpg 1 411 49 648 589
+positive/mug375.jpg 1 358 133 796 626
+positive/mug376.jpg 1 777 490 104 143
+positive/mug377.jpg 1 640 224 137 186
+positive/mug378.jpg 1 274 134 777 597
+positive/mug379.jpg 1 482 643 368 475
+positive/mug380.jpg 1 591 177 502 545
+positive/mug381.jpg 1 375 123 660 602
+positive/mug382.jpg 1 35 339 893 895
+positive/mug383.jpg 1 1 108 1003 734
+positive/mug384.jpg 1 29 188 406 401
+positive/mug385.jpg 1 695 493 258 218
+positive/mug386.jpg 1 583 405 273 273
+positive/mug387.jpg 1 434 214 517 447
+positive/mug388.jpg 1 382 145 681 582
+positive/mug389.jpg 1 421 710 427 374
+positive/mug390.jpg 1 483 524 422 329
+positive/mug391.jpg 2 91 80 516 416 656 252 624 534
+positive/mug392.jpg 1 516 236 534 394
+positive/mug393.jpg 1 559 337 510 406
+positive/mug394.jpg 1 254 425 478 370
+positive/mug395.jpg 1 503 425 359 292
+positive/mug396.jpg 2 112 424 459 394 15 200 409 383
+positive/mug397.jpg 1 369 138 672 633
+positive/mug398.jpg 1 427 228 539 473
+positive/mug399.jpg 1 380 194 823 593
+positive/mug400.jpg 1 513 84 638 560
+positive/mug401.jpg 1 533 337 511 456
+positive/mug402.jpg 1 542 421 458 335
+positive/mug403.jpg 1 294 5 791 767
+positive/mug404.jpg 1 74 43 871 765
+positive/mug405.jpg 1 359 218 660 535
+positive/mug406.jpg 1 482 269 321 406
+positive/mug407.jpg 1 499 328 554 426
+positive/mug408.jpg 1 605 369 530 484
+positive/mug409.jpg 7 398 210 315 290 642 111 280 252 903 228 273 250 962 487 261 266 739 360 240 265 553 495 285 283 333 463 219 256
+positive/mug410.jpg 1 852 48 424 452
+positive/mug411.jpg 1 237 729 459 471
+positive/mug412.jpg 1 147 49 628 621
+positive/mug413.jpg 1 1 374 662 904
+positive/mug414.jpg 1 412 141 427 602
+positive/mug415.jpg 1 351 134 585 679
+positive/mug416.jpg 1 542 394 350 343
+positive/mug417.jpg 1 152 565 510 492
+positive/mug418.jpg 1 395 449 404 304
+positive/mug419.jpg 1 252 562 571 495
+positive/mug420.jpg 1 203 318 593 588
+positive/mug421.jpg 1 156 672 693 497
+positive/mug422.jpg 1 118 246 555 449
+positive/mug423.jpg 1 412 647 441 337
+positive/mug424.jpg 1 222 101 741 706
+positive/mug425.jpg 1 193 56 572 504
+positive/mug426.jpg 1 360 297 486 489
+positive/mug427.jpg 1 300 294 294 307
+positive/mug428.jpg 1 680 190 420 400
+positive/mug429.jpg 1 362 464 579 575
+positive/mug430.jpg 1 447 404 577 426
+positive/mug431.jpg 1 157 395 438 386
+positive/mug432.jpg 1 242 551 403 372
+positive/mug433.jpg 1 557 208 690 615
+positive/mug434.jpg 1 232 197 581 633
+positive/mug435.jpg 1 209 180 931 854
+positive/mug436.jpg 1 135 151 559 497
+positive/mug437.jpg 1 181 429 569 650
+positive/mug438.jpg 1 470 165 777 625
+positive/mug439.jpg 1 45 736 505 434
+positive/mug440.jpg 1 134 113 524 379
+positive/mug441.jpg 4 204 271 201 211 52 248 206 246 233 478 167 216 34 482 181 199
+positive/mug442.jpg 4 45 12 678 350 792 1 483 305 15 387 737 463 785 401 489 451
+positive/mug443.jpg 1 486 180 407 368
+positive/mug444.jpg 1 766 240 431 395
+positive/mug445.jpg 1 298 474 473 452
+positive/mug446.jpg 1 511 349 381 335
+positive/mug447.jpg 1 239 70 444 492
+positive/mug448.jpg 1 764 32 516 701
+positive/mug449.jpg 1 106 279 841 572
+positive/mug450.jpg 1 523 143 487 418
+positive/mug451.jpg 1 545 333 572 500
+positive/mug452.jpg 2 476 151 619 656 81 67 461 645
+positive/mug453.jpg 1 551 398 430 428
+positive/mug454.jpg 1 78 125 594 632
+positive/mug455.jpg 1 694 511 521 342
+positive/mug456.jpg 1 95 346 865 782
+positive/mug457.jpg 1 93 19 707 706
+positive/mug458.jpg 2 45 112 777 588 634 324 583 431
+positive/mug459.jpg 1 443 314 340 358
+positive/mug460.jpg 1 515 380 209 192
+positive/mug461.jpg 1 732 461 443 392
+positive/mug462.jpg 1 670 417 416 371
+positive/mug463.jpg 1 97 336 1183 621
+positive/mug464.jpg 1 1 510 710 712
+positive/mug465.jpg 1 260 182 586 532

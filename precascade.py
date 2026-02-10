@@ -5,16 +5,15 @@ import hashlib
 import xml.etree.ElementTree as ET
 from playwright.sync_api import sync_playwright
 
-# ---------------- CONFIG ----------------
 CHROME_PATH = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
-SAVE_DIR = "images"  # default folder for downloads
-os.makedirs(SAVE_DIR, exist_ok=True)
-# ---------------------------------------
 
 # --------- GOOGLE IMAGES SCRAPER ---------
 def google_images_scraper():
     QUERY = input("🔹 Enter search query for Google Images: ")
     TARGET_COUNT = int(input("🔹 Enter number of images to download: "))
+
+    SAVE_DIR = input("Enter folder to save images (default=image_downloaded): ") or "image_downloaded"
+    os.makedirs(SAVE_DIR, exist_ok=True)
 
     SCROLL_PAUSE = 2
     SCROLL_STEP = 3000
@@ -79,7 +78,8 @@ def google_images_scraper():
             last_height = new_height
 
         browser.close()
-    print("🎉 Google Images download complete!")
+    print(f"🎉 Google download complete! Images saved in: {SAVE_DIR}")
+
 
 # --------- PIXABAY SCRAPER ---------
 def pixabay_scraper():
@@ -87,6 +87,9 @@ def pixabay_scraper():
     QUERY = input("🔹 Enter search query for Pixabay: ")
     TOTAL_IMAGES = int(input("🔹 Enter number of images to download: "))
     PER_PAGE = 200
+
+    SAVE_DIR = input("Enter folder to save images (default=image_downloaded): ") or "image_downloaded"
+    os.makedirs(SAVE_DIR, exist_ok=True)
 
     existing_files = [f for f in os.listdir(SAVE_DIR) if f.endswith(".jpg")]
     downloaded = len(existing_files)
@@ -118,11 +121,12 @@ def pixabay_scraper():
 
         page_num += 1
         time.sleep(1)
-    print("🎉 Pixabay download complete!")
+    print(f"🎉 Pixabay download complete! Images saved in: {SAVE_DIR}")
+
 
 # --------- REMOVE DUPLICATES ---------
 def remove_duplicates():
-    folder_path = input(f"🔹 Enter folder path (default={SAVE_DIR}): ") or SAVE_DIR
+    folder_path = input("🔹 Enter folder path (default=image_downloaded): ") or "image_downloaded"
     DELETE = input("Delete duplicates? (y/n): ").lower() == "y"
 
     def hash_file(filepath):
@@ -155,9 +159,10 @@ def remove_duplicates():
             print(dup)
     print("✅ Duplicate check complete!")
 
-# --------- RENAME IMAGES ---------
+
+# --------- RENAME IMAGES ONLY  ---------
 def rename_images():
-    folder_path = input(f"🔹 Enter folder path (default={SAVE_DIR}): ") or SAVE_DIR
+    folder_path = input(f"🔹 Enter folder path (default=image_downloaded): ") or "image_downloaded"
     prefix = input("Prefix for new filenames: ") or "img_"
     start_index = int(input("Starting index: ") or 1)
     num_digits = int(input("Number of digits (e.g., 3 for 001): ") or 3)
@@ -168,18 +173,26 @@ def rename_images():
 
     for file_name in files:
         old_path = os.path.join(folder_path, file_name)
-        if os.path.isfile(old_path):
-            ext = os.path.splitext(file_name)[1]
-            new_name = f"{prefix}{str(index).zfill(num_digits)}{ext}"
-            new_path = os.path.join(folder_path, new_name)
-            os.rename(old_path, new_path)
-            print(f"Renamed: {file_name} -> {new_name}")
-            index += 1
-    print("✅ Renaming complete!")
+        if not os.path.isfile(old_path):
+            continue
+
+        name, ext = os.path.splitext(file_name)
+       
+        if ext.lower() not in ['.jpg', '.jpeg', '.png', '.bmp', '.gif']:
+            continue
+
+        new_name = f"{prefix}{str(index).zfill(num_digits)}{ext}"
+        new_path = os.path.join(folder_path, new_name)
+
+        os.rename(old_path, new_path)
+        print(f"Renamed: {file_name} -> {new_name}")
+
+        index += 1
+    print("✅ Rename images complete! Don't forget to rename XML files if needed.")
 
 # --------- GENERATE POSITIVES.TXT ---------
 def generate_positives_txt():
-    folder = input("🔹 Enter folder path with XML files: ") or SAVE_DIR
+    folder = input("🔹 Enter folder path with XML files (default=image_downloaded): ") or "image_downloaded"
     output_file = input("Output file name (default=positives.txt): ") or "positives.txt"
 
     with open(output_file, "w") as f:
@@ -188,15 +201,81 @@ def generate_positives_txt():
                 continue
             tree = ET.parse(os.path.join(folder, xml_file))
             root = tree.getroot()
-            img_file = root.find("filename").text
-            for obj in root.findall("object"):
+            filename = root.find("filename").text
+            img_path = os.path.join(folder, filename)
+
+            objects = root.findall("object")
+            if not objects:
+                continue
+
+            line = f"{img_path} {len(objects)}"
+            for obj in objects:
                 bndbox = obj.find("bndbox")
-                x = bndbox.find("xmin").text
-                y = bndbox.find("ymin").text
-                w = int(bndbox.find("xmax").text) - int(x)
-                h = int(bndbox.find("ymax").text) - int(y)
-                f.write(f"{os.path.join(folder,img_file)} {x} {y} {w} {h}\n")
-    print(f"✅ {output_file} generated!")
+                xmin = int(bndbox.find("xmin").text)
+                ymin = int(bndbox.find("ymin").text)
+                xmax = int(bndbox.find("xmax").text)
+                ymax = int(bndbox.find("ymax").text)
+
+                w = xmax - xmin
+                h = ymax - ymin
+
+                line += f" {xmin} {ymin} {w} {h}"
+            f.write(line + "\n")
+
+    print(f"✅ {output_file} generated for OpenCV!")
+
+# --------- GENERATE NEGATIVES.TXT ---------
+def generate_negatives_txt():
+    folder = input("🔹 Enter folder path with negative images (default=negative): ") or "negative"
+    output_file = input("Output file name (default=negatives.txt): ") or "negatives.txt"
+
+    with open(output_file, "w") as f:
+        for file_name in os.listdir(folder):
+            file_path = os.path.join(folder, file_name)
+            if os.path.isfile(file_path) and file_name.lower().endswith(('.jpg', '.jpeg', '.png', '.bmp')):
+                f.write(file_path + "\n")
+
+    print(f"✅ {output_file} generated for OpenCV!")
+
+# --------- SUGGEST WIDTH/HEIGHT FOR opencv_createsamples ---------
+def suggest_sample_size():
+    info_file = input("🔹 Enter positives.txt path (default=positives.txt): ") or "positives.txt"
+
+    try:
+        widths = []
+        heights = []
+
+        with open(info_file, "r") as f:
+            for line in f:
+                parts = line.strip().split()
+                if len(parts) < 2:
+                    continue
+                num_objects = int(parts[1])
+                for i in range(num_objects):
+                    x = int(parts[2 + i*4])
+                    y = int(parts[3 + i*4])
+                    w = int(parts[4 + i*4])
+                    h = int(parts[5 + i*4])
+                    widths.append(w)
+                    heights.append(h)
+
+        if not widths or not heights:
+            print("❌ No bounding boxes found in the file.")
+            return
+
+        avg_w = sum(widths) / len(widths)
+        avg_h = sum(heights) / len(heights)
+
+        suggest_w = round(avg_w / 5)
+        suggest_h = round(avg_h / 5)
+
+        print(f"📏 Real mean bounding box: width={avg_w:.1f}, height={avg_h:.1f}")
+        print(f"💡 Suggested size for opencv_createsamples: -w {suggest_w} -h {suggest_h}")
+
+    except FileNotFoundError:
+        print(f"❌ File not found: {info_file}")
+    except Exception as e:
+        print(f"❌ Error: {e}")
 
 # --------- MAIN MENU ---------
 def main_menu():
@@ -205,11 +284,13 @@ def main_menu():
         print("1. Download images from Google")
         print("2. Download images from Pixabay")
         print("3. Remove duplicate images")
-        print("4. Rename images")
+        print("4. Rename images + XML")
         print("5. Generate positives.txt from XMLs")
-        print("6. Exit")
+        print("6. Generate negatives.txt from negative images")
+        print("7. Suggest size for opencv_createsamples")
+        print("8. Exit")
 
-        choice = input("Enter your choice (1-6): ")
+        choice = input("Enter your choice (1-8): ")
         if choice == "1":
             google_images_scraper()
         elif choice == "2":
@@ -221,10 +302,15 @@ def main_menu():
         elif choice == "5":
             generate_positives_txt()
         elif choice == "6":
+            generate_negatives_txt()
+        elif choice == "7":
+            suggest_sample_size()
+        elif choice == "8":
             print("👋 Goodbye!")
             break
         else:
             print("❌ Invalid choice, try again.")
+
 
 if __name__ == "__main__":
     main_menu()
