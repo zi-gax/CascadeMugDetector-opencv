@@ -110,7 +110,7 @@ opencv_createsamples.exe -info positive/positives.txt -w 24 -h 24 -num 1000 -vec
 ### Train Cascade
 
 ```bash
-opencv_traincascade.exe -data cascade/ -vec vec/positives.vec -bg negative/neg.txt -w 24 -h 24 -numPos 500 -numNeg 1000 -numStages 10
+opencv_traincascade.exe -data cascade/ -vec vec/positives.vec -bg negative/negatives.txt -w 24 -h 24 -numPos 500 -numNeg 1000 -numStages 10
 ```
 ## 📥 OpenCV Installer & Microsoft Visual C All Package
 
